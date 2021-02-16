@@ -68,5 +68,6 @@ for i in range(len(moves)):
 ax = fig.add_subplot(111)
 ax.set_aspect('equal', adjustable='box')
 ax.axis('off')
+fig.set_facecolor('xkcd:black')
 plt.savefig(name_of_file[0:-4]+".png" , dpi = 800)
 #plt.show()
