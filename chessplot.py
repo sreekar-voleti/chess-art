@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 # Change this to the name of the PGN file you want to plot
 
-name_of_file = "Viswanathan Anand_vs_Joel Lautier_1997.pgn"
+name_of_file = "NextMass_vs_mastermater96_2021.03.28.pgn"
 # Open the game
 
 pgn = open(name_of_file)
@@ -51,19 +51,19 @@ for i in range(len(moves)):
 cols = ["coral" , "turquoise"]
 
 # Parameters for plot
-opacity = 0.4
-thickness = 12
+max_opacity = 0.95
+thickness = 15
 
 # Plot a line between points a and b
-def simpleplot( a , b , i):
+def simpleplot( a , b , i , op ):
     x = [a[0] , b[0]]
     y = [a[1] , b[1]]
-    plt.plot( x , y , color = cols[i%2] , alpha = opacity , linewidth = thickness , solid_capstyle = 'round')
+    plt.plot( x , y , color = cols[i%2] , alpha = op , linewidth = thickness , solid_capstyle = 'round')
 
 fig = plt.figure()
 
 for i in range(len(moves)):
-    simpleplot(x[i] , y[i] , i)
+    simpleplot(x[i] , y[i] , i , (i+1)*max_opacity/len(moves))
 
 ax = fig.add_subplot(111)
 ax.set_aspect('equal', adjustable='box')
