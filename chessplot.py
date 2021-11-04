@@ -4,12 +4,11 @@ import chess
 from matplotlib import pyplot as plt
 from inputs import file_name , white_colour , black_colour , background_colour , opacity_gradient , max_opacity , thickness
 
-
 # Change this to the name of the PGN file you want to plot
 
 # Open the game
 
-pgn = open(file_name)
+pgn = open("PGNFiles/"+file_name)
 game = chess.pgn.read_game(pgn)
 board = game.board()
 
@@ -67,9 +66,9 @@ fig.set_facecolor(background_colour)
 if opacity_gradient == "on":
     for i in range(len(moves)):
         simpleplot(x[i] , y[i] , i , (i+1)*max_opacity/len(moves))
-elif opacity_gradient == "off"
+elif opacity_gradient == "off":
     for i in range(len(moves)):
         simpleplot(x[i] , y[i] , i , max_opacity)
 
-plt.savefig(file_name[0:-4]+".png" , dpi = 800)
+plt.savefig("ImageFiles/"+file_name[0:-4]+".png" , dpi = 800)
 #plt.show()
