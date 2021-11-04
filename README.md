@@ -2,9 +2,9 @@
 
 ## Concept
 
-This code uses a chess game's Portable Game Notation (PGN) to produce move-diagrams as shown below:
+This code uses a chess game's Portable Game Notation (PGN) to produce move-diagrams as shown below (produced from [Viswanathan Anand's 1997 brilliancy against Joel Laurier in Biel](https://www.youtube.com/watch?v=Sw4EtXkFx6Q)):
 
-![](example_images/Viswanathan Anand_vs_Joel Lautier_1997.png)
+![](example_images/ViswanathanAnand_vs_JoelLautier_1997.png)
 
 It is written in Python 3, using the `chess` package.
 
