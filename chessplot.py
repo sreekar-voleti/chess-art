@@ -2,13 +2,14 @@ import numpy as np
 import chess.pgn
 import chess
 from matplotlib import pyplot as plt
+from inputs import file_name , white_colour , black_colour , background_colour , opacity_gradient , max_opacity , thickness
+
 
 # Change this to the name of the PGN file you want to plot
 
-name_of_file = "NextMass_vs_mastermater96_2021.03.28.pgn"
 # Open the game
 
-pgn = open(name_of_file)
+pgn = open(file_name)
 game = chess.pgn.read_game(pgn)
 board = game.board()
 
@@ -48,11 +49,7 @@ for i in range(len(moves)):
     y.append(paths(moves[i])[1])
 
 # Colours for white and black
-cols = ["coral" , "turquoise"]
-
-# Parameters for plot
-max_opacity = 0.95
-thickness = 15
+cols = [white_colour , black_colour]
 
 # Plot a line between points a and b
 def simpleplot( a , b , i , op ):
@@ -62,12 +59,17 @@ def simpleplot( a , b , i , op ):
 
 fig = plt.figure()
 
-for i in range(len(moves)):
-    simpleplot(x[i] , y[i] , i , (i+1)*max_opacity/len(moves))
-
 ax = fig.add_subplot(111)
 ax.set_aspect('equal', adjustable='box')
 ax.axis('off')
-fig.set_facecolor('xkcd:black')
-plt.savefig(name_of_file[0:-4]+".png" , dpi = 800)
+fig.set_facecolor(background_colour)
+
+if opacity_gradient == "on":
+    for i in range(len(moves)):
+        simpleplot(x[i] , y[i] , i , (i+1)*max_opacity/len(moves))
+elif opacity_gradient == "off"
+    for i in range(len(moves)):
+        simpleplot(x[i] , y[i] , i , max_opacity)
+
+plt.savefig(file_name[0:-4]+".png" , dpi = 800)
 #plt.show()
