@@ -34,6 +34,6 @@ After you have the `chess` package set up, clone this repository into a director
 
     `python3 chessplot.py`
 
-    The .png file containing the image should appear in the `ImageFiles` directory.
+    The .png file containing the image should appear in the `chess-art/ImageFiles/` directory.
 
 4. Show your friends this cool new PGN art at the bar and the library!
