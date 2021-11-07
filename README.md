@@ -2,7 +2,7 @@
 
 ## Concept
 
-This code uses a chess game's Portable Game Notation (PGN) to produce move-diagrams as shown below (produced from [Viswanathan Anand's 1997 brilliancy against Joel Laurier in Biel](https://www.youtube.com/watch?v=Sw4EtXkFx6Q)):
+This code uses a chess game's Portable Game Notation (PGN) to produce move-diagrams as shown below (produced from [Viswanathan Anand's 1997 brilliancy against Joel Lautier in Biel](https://www.youtube.com/watch?v=Sw4EtXkFx6Q)):
 
 ![](example_images/ViswanathanAnand_vs_JoelLautier_1997.png)
 
